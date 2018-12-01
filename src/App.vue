@@ -4,9 +4,13 @@
     
     <div id="content">
       <img alt="Vue logo" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Caerte_van_Oostlant_4MB.jpg">
-      <Login/>
+      <nav>
+        <router-link to="/">Home</router-link>
+        <router-link to="/input">Input</router-link>
+        <router-link to="/log">Log</router-link>
+      </nav>
+      <router-view v-on:inputChange="onInputChanges"></router-view>
       
-      <MyInput v-on:inputChange="onInputChanges"/>
       <MyOutput v-bind:msg="item" v-bind:input="msg" v-for="item in items" />
 
       <h3>{{ "Yo "  + msg}}</h3> 
@@ -60,5 +64,14 @@ export default {
 
 img {
   width: 250px;
+}
+
+nav a {
+  padding: 20px;
+  background-color: light-grey;
+}
+
+nav {
+  padding-bottom: 32px;
 }
 </style>

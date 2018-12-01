@@ -1,6 +1,6 @@
 <template>
   <div class="loginCompp" >
-    <p v-if=" !logged " @click="login">Login</p>
+    <p class="green" v-if=" !logged " @click="login">Login</p>
     <p v-if=" logged " @click="logout">Logout</p>
   </div>
 </template>
@@ -23,3 +23,13 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .loginCompp {
+    background-color: red
+  }
+
+  .green {
+    background-color: green
+    }
+</style>

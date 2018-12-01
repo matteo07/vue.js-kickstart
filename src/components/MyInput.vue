@@ -1,6 +1,5 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
+  <div class="inputComp">
     <input @input="onInput">
   </div>
 </template>
