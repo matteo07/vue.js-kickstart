@@ -1,19 +1,19 @@
 <template>
   <div class="myOutput" v-if="msg">
-    <p>{{ msg.message + input }}</p>
+    <p>{{ msg.message + ": " + input }}</p>
+    <p>url param: {{ urlParam }}</p>
   </div>
 </template>
 
 <script>
 export default {
   name: 'myOutput',
-  props: [
-    'msg',
-    'input'
-  ]
+  props: ['msg', 'input', "urlParam"]
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+p {
+  display: inline-block;
+}
 </style>

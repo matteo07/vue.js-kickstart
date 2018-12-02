@@ -11,8 +11,8 @@ Vue.use(VueRouter);
 
 const routes = [
   { path: '/', component: null },
-  { path: '/input', component: MyInput },
-  { path: '/log', component: Login }
+  { path: '/input/:id', component: MyInput },
+  { name: "log", path: '/log/:id', component: Login }
 ]
 
 const router = new VueRouter({
